@@ -63,4 +63,31 @@ mainContainer.addEventListener('click',function(event){
 function renderThriving()
 {
     filterSection.innetHTML =''
+    
+
+    for(let thrive of thrivingList){
+     div = document.createElement('div');
+        div.className = 'card flex justify-between border p-8'
+    div.innerHTML = `<div class="space-y-6">
+                    <div>
+                        <p class="plantName text-4xl">Plant name 2</p>
+                        <p class="latinName">Latin name</p>
+                    </div>
+
+                    <div class="flex gap-2">
+                        <p class="light bg-gray-200 px-5" >Bright Indicate</p>
+                        <p class="water bg-gray-200 px-5" >Weekly</p>
+                    </div>
+                    <p class="status">not applicable</p>
+                    <p class="notes">Lorem ipsum dolor sit amet.</p>
+                    <div class="flex gap-5">
+                        <button class="thrive-btn bg-green-200 px-4 py-2">Thrive</button>
+                        <button class="struggling-btn bg-red-200 px-4 py-2">Struggle</button>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn-delete bg-red-200 text-red-600 px-4 py-2">Delete</button>
+                </div>`
+    }
+
 }
